@@ -16,3 +16,13 @@ and context behind the query. Semantic search techniques utilize natural languag
 and semantic parsing, to extract the semantics of text. By understanding the relationships 
 between words and phrases, semantic search systems can identify relevant documents based on 
 the meaning and context rather than just literal keyword matching.
+
+
+1. WebWorkers
+2. TailWind CSS
+3. Fuzzy Search - Discuss alternate route using Breadth-First-search
+4. Dexie.js to store old queries. 
+    - load
+    - add  
+    - delete
+5. Neural Search using webworkers. Python code.

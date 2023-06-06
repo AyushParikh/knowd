@@ -7,16 +7,17 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 function TicketTable(props) {
-    const { ticketArray } = props
+    const { ticketArray, addQuery } = props
 
   return (
     <div>
         <TableContainer component={Paper} className="max-h-72 w-[700px] bg-white overflow-y-auto">
             <Table aria-label="simple table" >
                 <TableBody>
-                {ticketArray.map((row) => (
+                {ticketArray.map((row, i) => (
                     <TableRow
-                    key={row.name}
+                    key={i}
+                    onClick={addQuery}
                     className="hover:bg-[#E5E5E5]"
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
@@ -25,7 +26,7 @@ function TicketTable(props) {
                 ))}
                 </TableBody>
             </Table>
-            </TableContainer>
+        </TableContainer>
     </div>
   )
 }

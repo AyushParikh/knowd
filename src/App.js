@@ -7,18 +7,18 @@ function App() {
     const [filteredArray, setFilteredArray] = useState([])
 
 
-    useEffect(()=> {
-        const worker = new Worker(new URL('./neuralworker.js', import.meta.url), {
-            type: 'module'
-          });
-        worker.postMessage("text");
+    // useEffect(()=> {
+    //     const worker = new Worker(new URL('./neuralworker.js', import.meta.url), {
+    //         type: 'module'
+    //       });
+    //     worker.postMessage("text");
 
-        worker.onmessage = (e) => {
-            console.log(e)
-            worker.terminate();
-        }
+    //     worker.onmessage = (e) => {
+    //         console.log(e)
+    //         worker.terminate();
+    //     }
 
-    }, [])
+    // }, [])
 
     const handleChange = async (e) => {
         const worker = new Worker(new URL("./worker.js", import.meta.url))

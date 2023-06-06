@@ -5,6 +5,11 @@ import words from './words';
 
 const engine = Engine(ticketArray);
 
+/** alternatively for fuzzy search. we can perform a BFS on the graph of words. For each node we visit in the BFS: 
+ *  - create a new sentence for that word and perform a search. add word to the queue.
+ *  - check next word in queue, check dictionary for similar words and repeat.
+ *  - keep track of words we have visited in a variable "seen" to prevent cycles. 
+ * */ 
 onmessage = async function (e) { 
     var allData = []
     let sentence = e.data.split(" ");
@@ -17,7 +22,7 @@ onmessage = async function (e) {
         }
         var newSearch = tmp.join(" ")
         let results = Search(engine, newSearch)
-        results.map(row => {
+        results.forEach(row => {
             allData.push(row[0])
         })
     });
