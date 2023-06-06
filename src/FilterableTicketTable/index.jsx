@@ -7,7 +7,7 @@ function FilterableTicketTable(props) {
   return (
     <div class="p-20">
         <input
-          class="px-5 py-3 w-full border border--[#E5E5E5] focus:outline-none"
+          class="px-5 py-3 w-full focus:outline-none"
           placeholder='Search for anything...'
           type='text'
           autoCapitalize='false'

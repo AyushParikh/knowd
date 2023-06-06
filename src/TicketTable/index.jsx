@@ -11,7 +11,7 @@ function TicketTable(props) {
 
   return (
     <div>
-        <TableContainer component={Paper} class="h-60 w-[700px] bg-white overflow-y-auto">
+        <TableContainer component={Paper} class="max-h-72 w-[700px] bg-white overflow-y-auto">
             <Table aria-label="simple table" >
                 <TableBody>
                 {ticketArray.map((row) => (
