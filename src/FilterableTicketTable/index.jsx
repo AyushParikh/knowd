@@ -5,9 +5,9 @@ function FilterableTicketTable(props) {
     const { ticketArray, textChange } = props
 
   return (
-    <div class="p-20">
+    <div className="p-20">
         <input
-          class="px-5 py-3 w-full focus:outline-none"
+          className="px-5 py-3 w-full focus:outline-none"
           placeholder='Search for anything...'
           type='text'
           autoCapitalize='false'

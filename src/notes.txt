@@ -1,0 +1,18 @@
+Neural Search:
+Neural search refers to the use of neural networks, particularly deep learning models, 
+to enhance the search process. It involves leveraging neural network architectures such 
+as transformers to improve various aspects of search, including query understanding, 
+document ranking, and relevance matching. Neural search models often rely on dense vector 
+representations (embeddings) to encode the meaning of queries and documents in a high-dimensional 
+space. By utilizing neural networks, neural search aims to capture complex relationships 
+and patterns within the data for more accurate and context-aware search results.
+
+Semantic Search:
+Semantic search, on the other hand, focuses on understanding the meaning of queries and 
+documents by interpreting their semantic context. It aims to provide search results that
+are not solely based on keyword matching but rather on the understanding of the intent 
+and context behind the query. Semantic search techniques utilize natural language processing 
+(NLP) methods, including syntactic analysis, named entity recognition, semantic role labeling, 
+and semantic parsing, to extract the semantics of text. By understanding the relationships 
+between words and phrases, semantic search systems can identify relevant documents based on 
+the meaning and context rather than just literal keyword matching.

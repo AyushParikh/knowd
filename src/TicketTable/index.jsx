@@ -11,13 +11,13 @@ function TicketTable(props) {
 
   return (
     <div>
-        <TableContainer component={Paper} class="max-h-72 w-[700px] bg-white overflow-y-auto">
+        <TableContainer component={Paper} className="max-h-72 w-[700px] bg-white overflow-y-auto">
             <Table aria-label="simple table" >
                 <TableBody>
                 {ticketArray.map((row) => (
                     <TableRow
                     key={row.name}
-                    class="hover:bg-[#E5E5E5]"
+                    className="hover:bg-[#E5E5E5]"
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
                     <TableCell align="left" style={{border:0}}>{row.text}</TableCell>
