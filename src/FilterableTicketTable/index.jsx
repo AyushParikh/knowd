@@ -1,23 +1,13 @@
-import React, { useState } from 'react'
-import TicketTypeSelector from '../TicketTypeSelector'
+import React from 'react'
 import TicketTable from '../TicketTable'
 
 function FilterableTicketTable(props) {
     const { ticketArray, textChange } = props
 
-    const [filteredTicketArray, setFilteredArray] = useState(ticketArray)
-    const [selectedValue, setSelectedValue] = useState()
-
-    const handleChange = (value) => {
-        setSelectedValue(value)
-        const filtered = ticketArray.filter(obj => obj.type === value)
-        setFilteredArray(filtered)
-    }
-
   return (
-    <div style={{padding: 20}}>
+    <div class="p-20">
         <input
-          style={{padding: 10, marginBottom: 10}}
+          class="px-5 py-3 w-full border border--[#E5E5E5] focus:outline-none"
           placeholder='Search for anything...'
           type='text'
           autoCapitalize='false'
@@ -26,7 +16,6 @@ function FilterableTicketTable(props) {
           autoFocus
           onChange={textChange}
         />
-        <TicketTypeSelector selectedValue={selectedValue} setSelectedValue={handleChange}/>
         <TicketTable ticketArray={ticketArray} />
     </div>
   )

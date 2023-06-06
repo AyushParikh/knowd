@@ -1,14 +1,26 @@
 import './App.css';
-import React, { useState } from 'react'
-
-import ticketArray from './ticket';
+import React, { useEffect, useState } from 'react'
 
 import FilterableTicketTable from './FilterableTicketTable';
 
 function App() {
-    const [filteredArray, setFilteredArray] = useState(ticketArray)
+    const [filteredArray, setFilteredArray] = useState([])
 
-    const handleChange = (e) => {
+
+    useEffect(()=> {
+        const worker = new Worker(new URL('./neuralworker.js', import.meta.url), {
+            type: 'module'
+          });
+        worker.postMessage("text");
+
+        worker.onmessage = (e) => {
+            console.log(e)
+            worker.terminate();
+        }
+
+    }, [])
+
+    const handleChange = async (e) => {
         const worker = new Worker(new URL("./worker.js", import.meta.url))
         worker.postMessage(e.target.value);
         worker.onmessage = (e) => {
