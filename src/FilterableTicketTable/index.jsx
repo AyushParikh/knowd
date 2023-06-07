@@ -7,7 +7,10 @@ import TableCell from "@mui/material/TableCell";
 import TableHead from '@mui/material/TableHead';
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
+import Switch from '@mui/material/Switch';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import Paper from "@mui/material/Paper";
+
 import { useLiveQuery } from "dexie-react-hooks";
 import { Button } from "@mui/material";
 
@@ -20,7 +23,7 @@ db.version(1).stores({
 const { query } = db;
 
 function FilterableTicketTable(props) {
-  const { ticketArray, textChange } = props;
+  const { ticketArray, textChange, useFuzzy, setFuzzy } = props;
 
   const allItems = useLiveQuery(() => query.toArray(), []);
 
@@ -73,6 +76,7 @@ function FilterableTicketTable(props) {
 
   return (
     <div className="p-20">
+      <FormControlLabel control={<Switch checked={useFuzzy} onChange={setFuzzy} color="secondary"/>} label="Fuzzy Search"/>
       <input
         className="px-5 py-3 w-full focus:outline-none"
         placeholder="Search for anything..."
