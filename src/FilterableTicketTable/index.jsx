@@ -75,7 +75,7 @@ function FilterableTicketTable(props) {
   };
 
   return (
-    <div className="p-20 max-w-[1000px]">
+    <div className="p-20 w-[1000px]">
       <FormControlLabel control={<Switch checked={useFuzzy} onChange={setFuzzy} color="secondary"/>} label="Fuzzy Search"/>
       <input
         className="px-5 py-3 w-full focus:outline-none"
