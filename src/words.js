@@ -1,6 +1,7 @@
 const words = {
     "decent": ["decent", "good", "nice"],
     "good": ["good", "decent", "nice"],
+    "nice": ["good", "decent", "nice"],
     "slow": ["slow", "laging", "lagging", "lag"],
     "laging": ["laging", "slow", "lagging", "lag"],
     "lagging": ["lagging", "slow", "lag", "laging"],
