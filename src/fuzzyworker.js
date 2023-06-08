@@ -19,7 +19,6 @@ onmessage = async function (e) {
             words[word].forEach(newWord => {
                 tmp[i] = newWord
                 var newSearch = tmp.join(" ")
-                console.log(newSearch)
                 let results = Search(engine, newSearch)
                 results.forEach(row => {
                     allData.push(row[0])
